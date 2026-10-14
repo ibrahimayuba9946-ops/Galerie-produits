@@ -1,0 +1,153 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, sans-serif;
+  color: #243047;
+  background: #f4f7fb;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 45px 20px 25px;
+}
+
+header h1 {
+  font-size: clamp(26px, 4vw, 38px);
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #667085;
+}
+
+.pricing-container {
+  width: min(1100px, 92%);
+  margin: 20px auto 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.pricing {
+  flex: 1 1 260px;
+  max-width: 340px;
+  padding: 28px 24px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.pricing:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.13);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 0 15px;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: bold;
+  color: #16834a;
+  margin: 0 0 20px;
+}
+
+.price span {
+  font-size: 14px;
+  font-weight: normal;
+  color: #667085;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  flex-grow: 1;
+}
+
+.features li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.features li::before {
+  content: "✓ ";
+  color: #16834a;
+  font-weight: bold;
+}
+
+.btn {
+  width: 100%;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2459a9;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #173f7c;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #f0b429;
+  outline-offset: 3px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+#message {
+  text-align: center;
+  font-weight: bold;
+  padding: 0 15px 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #667085;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding-top: 30px;
+  }
+
+  .pricing-container {
+    width: 90%;
+    gap: 18px;
+  }
+
+  .pricing {
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
